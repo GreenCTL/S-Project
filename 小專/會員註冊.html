@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="../圖片素材/nMnXJWBh8FlFV4QCJwWDyhG43tEqgG2x.ico" type="image/ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css2.css">
+    <title>會員註冊</title>
+    <style>
+        .servers-container {
+            position: relative;
+            left: 1200px;
+        }
+
+        .regForm {
+            margin: 10rem auto auto auto;
+            background-color: rgba(0, 0, 0, 0.403);
+            width: 600px;
+            border-radius: 5px;
+            color: rgb(230, 237, 245);
+        }
+
+        .tab {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .formtitle {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .re {
+            margin: 2rem auto auto auto;
+            background-color: rgba(0, 0, 0, 0.403);
+            color: aliceblue;
+            width: 400px;
+            height: 50px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login {
+            margin-left: 15rem;
+        }
+
+        .login:visited {
+            color: white;
+        }
+
+        .login:active {
+            color: black;
+        }
+
+        .lg:visited {
+            color: white;
+        }
+
+        .lg:active {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body style="background-color: black;">
+        <!--navbarTOP------------------------------------------------------------------------------------------->
+        <nav class="navbarTOP">
+            <div class="nav1"><a href="./小專.html"><img class="nav-img"
+                        src="http://43.226.53.98:88/_images/top_logo.png"></a>
+            </div>
+            <div class="nav2">公告</div>
+            <div class="nav3">遊戲資訊</div>
+            <div class="nav4">排行榜</div>
+            <div class="nav5">遊戲下載</div>
+            <div class="nav6">商城</div>
+            <div class="nav7"><a class="login-rj" href="./會員登入.html">會員登入/註冊</a></div>
+            <!-- 表單(手機板) -->
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <!-- 手機板下拉式選單 -->
+            <div class="dropdown-menu" id="dropdownmenu" style="display: none;">
+                <a href="#">公告</a>
+                <a href="#">遊戲資訊</a>
+                <a href="#">排行榜</a>
+                <a href="#">遊戲下載</a>
+                <a href="#">商城</a>
+                <a href="#">會員登入/註冊</a>
+            </div>
+            <div class="navbarHEAD">
+
+                <div class="nav2-1">
+                    <div><a class="navbar-allinfo" href="./全部公告.html">全部公告</a></div>
+                    <div><a class="navbar-info" href="./更新資訊.html">更新資訊</a></div>
+                    <div><a class="navbar-event" href="./活動消息.html">活動消息</a></div>
+                </div>
+                <div class="nav3-1">
+                    <div><a class="navbar-sheet" href="./寵物合成表(龍).html">寵物合成</a></div>
+                    <div><a style="color: white;" class="navbar-event" href="./故事背景.html">故事背景</a></div>
+                    <div><a style="color: white;" class="navbar-event" href="./角色介紹.html">角色介紹</a></div>
+                </div>
+                <div class="nav4-1">
+                    <div>等級排行</div>
+                    <div>寵物排行</div>
+                    <div>vip排行</div>
+                </div>
+                <div class="nav5-1">
+                    <div><a style="color: white;" class="navbar-event" href="../圖片素材/03_qq_symbol-1-250x300.png"
+                            download>客戶端下載</a></div>
+                    <div><a class="navbar-event" href="../圖片素材/3323.png">補丁下載</a></div>
+                    <div><a class="navbar-sheet" href="./安裝教學.html">安裝教學</a></div>
+                </div>
+                <div class="nav6-1">
+                    <div>儲值</div>
+                    <div>vip獎勵</div>
+                    <div>通行證</div>
+                </div>
+        </nav>
+        <!-- nav-------------------------------------------------------- -->
+        <!-- backgroundimg------------------------------------------------------- -->
+
+        <div style="display: inline-block;">
+            <img src="https://i.postimg.cc/GmVpXKMz/c110fba0-ecce-4f39-bc8d-1e723a6aa470.webp"
+                class="centerimg"><!--中央圖片-->
+            <div class="servers-container" style="display: none;">
+                <a href="#"><img src="https://i.postimg.cc/L6Bv9M3r/servers-removebg-preview.png" class="servers"></a>
+                <div class="servers-fornow">
+                    <div class="servers-addition">
+                        伺服器狀況:良好
+                        <span class="green"></span>
+                    </div>
+                    <div class="servers-addition-2">
+                        EXP倍率:30倍
+                        <br>
+                        GP倍率:30倍
+                        <br>
+                        寵物掉落率:30倍
+                        <br>
+                        道具掉落率:30倍
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form class="regForm" action="">
+
+            <h1 class="formtitle">奇幻寶貝青春獵人註冊</h1>
+
+            <!-- One "tab" for each step in the form: -->
+            <div class="tab">帳號
+                <p><input name="id" oninput="this.className = ''"></p>
+            </div>
+
+            <div class="tab">電子信箱
+                <p><input style="width:200px;" type="email" placeholder="E-mail..." oninput="this.className = ''"></p>
+            </div>
+
+
+            <div class="tab">密碼
+                <p><input oninput="validatePasswordMatch()" name="password" type="password" placeholder="長度介於8~20個字"
+                        oninput="this.className = ''"></p>
+            </div>
+            <div class="tab">確認密碼
+                <p><input oninput="validatePasswordMatch()" name="passwordConfirm" type="password" placeholder="必須與密碼相同"
+                        oninput="this.className = ''"></p>
+                <div id="passwordError" style="color: red;font-size: 14px;margin-top: 5px;"></div>
+            </div>
+
+            <div class="tab">電話號碼
+                <p><input type="number" placeholder="+886..." oninput="this.className = ''"></p>
+                <button type="button" class="re">註冊</button>
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="login">已經擁有會員?<a class="lg" href="./會員登入.html">登入</a></div>
+            <br>
+            <br>
+            <br>
+            <br>
+        </form>
+
+
+        <!-- js------------------------------------------ -->
+        <script>
+
+            function toggleMenu() {
+                let menu = document.getElementById("dropdownmenu");
+                menu.classList.toggle("active") /*切換menu*/
+            }
+        </script>
+
+        <script>  /*下選單對齊上選單*/
+            function updateNavbarHeadPosition() {
+                if (window.innerWidth > 968) {
+                    // 只在桌機版計算對齊
+                    let nav2 = document.querySelector('.nav2')?.getBoundingClientRect();
+                    let nav6 = document.querySelector('.nav6')?.getBoundingClientRect();
+
+                    document.documentElement.style.setProperty('--nav2-left', `${nav2.left}px`);
+                    document.documentElement.style.setProperty('--navbar-width', `${nav6.right - nav2.left}px`);
+
+                    navbarHEAD.style.display = "flex"; // 桌機版顯示
+                } else {
+                    navbarHEAD.style.display = "none"; // 手機版完全隱藏
+                }
+            };
+            window.addEventListener("load", updateNavbarHeadPosition)
+            window.addEventListener("resize", updateNavbarHeadPosition)
+        </script>
+
+
+        <!-- //註冊表單 -->
+        <script>
+            window.addEventListener("load", function () {
+                let registerButton = document.querySelector(".re"); // 確保按鈕存在
+                if (!registerButton) return; // 如果按鈕不存在，停止執行
+
+                registerButton.onclick = (event) => {
+                    event.preventDefault(); // 防止表單提交
+
+                    let tabs = document.querySelectorAll(".tab");
+                    let isEmpty = false;
+                    let isInvalidEmail = false;
+                    let isInvalidPhone = false;
+                    //存放使用者的資料到使用者目前使用的瀏覽器內
+                    let userData = {}
+
+                    // 清除舊的錯誤訊息
+                    // document.querySelectorAll(".error-message").forEach(msg => msg.remove());
+                    document.querySelectorAll("input").forEach(input => {
+                        input.addEventListener("input", function () {
+                            let errorMsg = this.parentNode.querySelector(".error-message");
+                            if (errorMsg) {
+                                errorMsg.remove(); // 只要輸入就刪除錯誤訊息
+                            }
+                            this.style.border = ""; // 移除紅色警告框
+                        });
+                    });
+
+
+                    // 密碼宣告
+                    let passwordInput = document.querySelector("input[name='password']")
+                    let passwordConfirmInput = document.querySelector("input[name='passwordConfirm']")
+
+
+                    let password = passwordInput.value.trim()
+                    let passwordConfirm = passwordConfirmInput.value.trim()
+
+
+                    // 紀錄密碼是否違反創建規則
+                    let isInvalidPassword = false
+
+                    let passwordErrorMsg = document.getElementById("passwordError")
+
+
+                    tabs.forEach(tab => {
+                        let inputs = tab.querySelectorAll("input");
+                        inputs.forEach(input => {
+                            // 檢查是否填寫(欄位不可空白=>input下方的紅線)
+                            if (input.value.trim() === "") {
+                                isEmpty = true;
+                                input.style.border = "2px bold red";
+                                showErrorMessage(input, "此欄位不可空白");
+                            } else {
+                                input.style.border = "";
+                            }
+
+                            //儲存使用者輸入的資料
+                            let inputName = input.name || input.type //處理輸入名稱
+                            userData[inputName] = input.value.trim();//處理mail、電話、密碼等
+
+
+                            // 檢查電子信箱格式
+                            if (input.type === "email") {
+                                // /條件/  []裡面的^ =>不包含 \s =>任何空白字元 @=>符號
+                                // [^\s@] => 匹配至少1個非空白字元及非@符號=>email的開頭
+                                // @ => email的@
+                                // \.=> email的.
+                                // 結尾的[^\s@] =>與開頭相同，代表域名 ex.  .com .org等
+                                // $ 字串的結尾
+
+                                let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                                if (!emailPattern.test(input.value)) {
+                                    isInvalidEmail = true;
+                                    input.style.border = "2px solid red";
+                                    showErrorMessage(input, "請依電子郵件格式輸入 (example@example.com)");
+                                }
+                            }
+
+                            // 檢查電話號碼格式（必須是 10 位數）
+                            if (input.type === "number") {
+                                // /裡面包條件/  ^開頭 \d必須是數字 {範圍=剛好10個數字} $結尾
+                                let phonePattern = /^\d{10}$/
+                                if (!phonePattern.test(input.value)) { // 確保是字串
+                                    isInvalidPhone = true;
+                                    input.style.border = "2px solid red";
+                                    showErrorMessage(input, "請輸入 10 位數的電話號碼");
+                                }
+                            }
+
+                            // 檢查密碼格式(至少8位數且最多20個字，不包含特殊字元)
+                            if (input.type === "password") {
+                                let passwordPattern = /^[A-Za-z0-9]{8,20}$/
+                                if (!passwordPattern.test(input.value)) {
+                                    isInvalidPassword = true
+                                    input.style.border = "2px solid red"
+                                    showErrorMessage(input, "密碼長度介於8~20")
+                                }
+                            }
+
+
+                        });
+                    });
+
+                    //讀取lacalstorage的註冊帳號陣列，沒有的話=空陣列[]
+                    let registeredUsers = JSON.parse(localStorage.getItem("registeredUsers")) || [];
+
+                    //檢查帳號、電子郵件、手機號碼是否重複
+                    let idInput = document.querySelector("input[name='id']");
+                    if (idInput) {
+                        userData.id = idInput.value.trim(); // 確保正確存取帳號
+                    }
+                    let emailInput = document.querySelector("input[type='email']");
+                    if (emailInput) userData.email = emailInput.value.trim();
+
+
+                    let phoneInput = document.querySelector("input[type='number']");
+                    if (phoneInput) userData.phone = phoneInput.value.trim();
+
+                    //檢查密碼長度是否符合8~20個字
+                    if (password.length < 8 || password.length > 20) {
+                        isInvalidPassword = true
+                        passwordInput.style.border = "2px solid red"
+                        showErrorMessage(passwordInput, "密碼長度需介於8~20個字之間")
+                    } else {
+                        passwordInput.style.border = "" //如果符合則取消警告
+                    }
+
+
+                    //檢查確認密碼是否與密碼一致
+                    if (passwordConfirm.length > 0) {
+                        if (password !== passwordConfirm) {
+                            passwordConfirmInput.style.border = "2px solid red"
+                            passwordErrorMsg.innerText = "密碼與確認密碼不一致"
+                            return
+                        } else {
+                            passwordConfirmInput.style.border = ""
+                            passwordErrorMsg.innerText = ""
+                        }
+                    }
+
+                    //宣告帳號、email、手機
+                    let isDuplicateId = registeredUsers.some(user => user.id && user.id === userData.id);
+                    let isDuplicateEmail = registeredUsers.some(user => user.email && user.email === userData.email);
+                    let isDuplicatePhone = registeredUsers.some(user => user.phone && user.phone === userData.phone);
+
+
+                    // 顯示錯誤提示，確保所有資料填寫正確
+                    if (isEmpty) {
+                        alert("請填寫所有欄位！");
+                    } else if (isInvalidEmail || isInvalidPhone) {
+                        alert("請修正錯誤的格式!");  //顯示錯誤訊息    
+                    } else if (isDuplicateId) {
+                        alert("此帳號已被註冊，請使用其他帳號")
+
+                        //找到帳號欄位
+                        let idInput = document.querySelector("input[name='id']")
+                        idInput.style.border = ("2px solid red")
+                        showErrorMessage(idInput, "請使用其他帳號")
+
+                    } else if (isDuplicateEmail) {
+                        alert("此email已被註冊，請使用其他email")
+                        let emailInput = document.querySelector("input[type='email']")
+                        //確保input確實存在
+                        if (emailInput) {
+                            showErrorMessage(emailInput, "請使用其他電子郵件")
+                        }
+                        emailInput.style.border = ("2px solid red")
+                    } else if (isDuplicatePhone) {
+                        alert("此手機號碼已被註冊，請使用其他手機號碼")
+                        let phoneInput = document.querySelector("input[type='number']")
+                        if (phoneInput) {
+                            phoneInput.style.border = "2px solid red";
+                            showErrorMessage(phoneInput, "請使用其他手機號碼")
+                        }
+
+                    } else if (isInvalidPassword) {
+                        alert("密碼長度需介於8~20個字之間")
+                        return
+                    }
+
+                    else {  //儲存多個帳號(不會覆蓋舊的帳號)
+                        registeredUsers.push({
+                            id: document.querySelector("input[name='id']").value.trim(),
+                            password: document.querySelector("input[name='password']").value.trim(),
+                            email: document.querySelector("input[type='email']").value.trim(),
+                            phone: document.querySelector("input[type='number']").value.trim()
+                        }); localStorage.setItem("registeredUsers", JSON.stringify(registeredUsers))
+
+                        alert("註冊成功!");
+                        //註冊成功後跳轉至登入頁面
+                        window.location.href = "./會員登入.html";
+
+                    }
+
+
+
+                }
+            })
+
+            // 顯示錯誤訊息函數
+            function showErrorMessage(input, message) {
+                //在input輸入後清除警告紅字
+                let existingErrorMsg = input.parentNode.querySelector(".error-message");
+                if (existingErrorMsg) {
+                    existingErrorMsg.remove(); // 先刪除舊的錯誤訊息
+                }
+                //避免重複顯示錯誤
+                if (input.parentNode.querySelector(".error-message")) return
+                let errorMsg = document.createElement("div");
+                errorMsg.className = "error-message";
+                errorMsg.style.color = "red";
+                errorMsg.style.fontSize = "14px";
+                errorMsg.style.marginTop = "5px";
+                errorMsg.innerText = message;
+                input.parentNode.appendChild(errorMsg);
+            }
+
+            //檢查確認密碼是否=密碼
+            function validatePasswordMatch() {
+                let password = document.querySelector("input[name='password']").value
+                let passwordConfirm = document.querySelector("input[name='passwordConfirm']").value
+                let errorMsg = document.getElementById("passwordError")
+
+                if (passwordConfirm.length > 0) { //當使用者輸入確認密碼時才檢查
+                    if (password !== passwordConfirm) {
+                        errorMsg.innerText = "密碼與確認密碼不一致"
+                    } else {
+                        errorMsg.innerText = ""
+                    }
+                }
+            }
+
+            //查詢使用者曾經註冊過的帳號(只限於當前瀏覽器)
+            console.log(localStorage.getItem("registeredUsers"));
+
+        </script>
+        <script>
+            window.onload = function () { //檢查會員是否登入 已登入=>更改icon
+                let currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
+                let loginNav = document.querySelector(".login-rj"); // 找到「會員登入/註冊」的 <a> 標籤
+
+                if (currentUser) { // 用戶已登入
+                    loginNav.innerHTML = `<img src="../圖片素材/login.jpg" alt="會員" style="width: 40px; height: 40px; border-radius: 50%;">`;
+                    loginNav.href = "#"; // 避免點擊跳轉
+                    loginNav.style.cursor = "pointer";
+
+                    // 點擊會員 Icon 進行登出
+                    loginNav.addEventListener("click", function () {
+                        let confirmLogout = confirm("確定要登出嗎？");
+                        if (confirmLogout) {
+                            localStorage.removeItem("currentUser");
+                            window.location.reload();
+                        }
+                    });
+                }
+            };
+
+        </script>
+    </body>
+
+</html>

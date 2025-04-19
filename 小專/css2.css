@@ -1,0 +1,513 @@
+        /* navtop----------------------------------------------------------- */
+
+        .navbarTOP {
+            z-index: 10;
+            font-size: 20px;
+            white-space: nowrap;
+            font-weight: bold;
+            background-color: rgba(7, 91, 91, 0.919);
+            color: aliceblue;
+            width: 100%;
+            height: auto;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+        .install{
+            color: white;
+            text-decoration: none;
+        }
+        .install:hover{
+            color: rgba(7, 91, 91, 0.919);
+            text-decoration: underline
+        }
+        .navbar-allinfo:focus {
+            color: black;
+        }
+
+        .navbar-allinfo:hover {
+            color: rgba(7, 91, 91, 0.919);
+            text-decoration: underline
+        }
+        .navbar-allinfo{
+            text-decoration: none;
+            color: white;
+        }
+
+        /*nav的寵物合成*/
+        .navbar-sheet:focus {
+            color: black;
+        }
+
+        .navbar-sheet:visited {
+            color: white;
+        }
+
+        .navbar-sheet:hover {
+            color: rgba(7, 91, 91, 0.919);
+            text-decoration: underline
+        }
+        .navbar-sheet{
+            text-decoration: none;
+            
+        }
+
+        /*nav的更新資訊*/
+        .navbar-info:focus {
+            color: black;
+        }
+
+        .navbar-info:visited {
+            color: white;
+        }
+
+        .navbar-info:hover {
+            color: rgba(7, 91, 91, 0.919);
+            text-decoration: underline;
+        }
+        .navbar-info{
+            text-decoration: none;
+        }
+
+        /*nav的活動消息*/
+        .navbar-event:focus {
+            color: black !important;
+        }
+
+        .navbar-event:visited {
+            color: white !important;
+        }
+
+        .navbar-event:hover {
+            color: rgba(7, 91, 91, 0.919) !important;
+            text-decoration: underline;
+        }
+        .navbar-event{
+            text-decoration: none;
+        }
+
+
+        /*navbarTOP的半透明下拉式選單*/
+
+
+        .nav1 {
+            flex: 3;
+            height: 90px;
+            padding: 2px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .nav-img {
+            display: block;
+            margin-left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 180px;
+            height: auto;
+
+        }
+
+        /* 半透明的下拉式選單 */
+        .navbarHEAD {
+            flex: 1;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            position: absolute;
+            top: 100%;
+            right: 1%;
+            left: var(--nav2-left);
+            width: var(--navbar-width);
+            background-color: rgba(0, 0, 0, 0.7);
+            /* 半透明黑色 */
+            padding: 15px 0;
+            z-index: 1000;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+
+        .navbarHEAD .submenu-container {
+            display: flex;
+            width: 100%;
+            margin: auto;
+            justify-content: space-evenly;
+        }
+
+        .nav2-1,
+        .nav3-1,
+        .nav4-1,
+        .nav5-1,
+        .nav6-1 {
+            text-decoration: none;
+            flex: 1;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav6-1 {
+            text-align: center;
+        }
+
+
+        /* 選單內的文字 */
+        .navbarHEAD div {
+            text-decoration: none;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            /*文字垂直排列*/
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        /* 滑鼠經過navtop時顯示半透明下拉式選單 */
+        .navbarTOP:hover .navbarHEAD {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .nav2,
+        .nav3,
+        .nav4,
+        .nav5,
+        .nav6,
+        .nav7 {
+            flex: 3;
+            height: 70px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            /*下拉式選單可以相對於這些元素定位*/
+        }
+
+        .nav2:hover {
+            color: rgba(75, 240, 240, 0.919);
+            background-color: rgb(70, 137, 137);
+            border-bottom: 4px solid aqua;
+            user-select: none;
+        }
+
+        .nav3:hover {
+            color: rgba(75, 240, 240, 0.919);
+            background-color: rgb(70, 137, 137);
+            border-bottom: 4px solid aqua;
+            user-select: none;
+            /* cursor: pointer; */
+        }
+
+        .nav4:hover {
+            color: rgba(75, 240, 240, 0.919);
+            background-color: rgb(70, 137, 137);
+            border-bottom: 4px solid aqua;
+            user-select: none;
+            /* cursor: pointer; */
+        }
+
+        .nav5:hover {
+            color: rgba(75, 240, 240, 0.919);
+            background-color: rgb(70, 137, 137);
+            border-bottom: 4px solid aqua;
+            user-select: none;
+            /* cursor: pointer; */
+        }
+
+        .nav6:hover {
+            color: rgba(75, 240, 240, 0.919);
+            background-color: rgb(70, 137, 137);
+            border-bottom: 4px solid aqua;
+            user-select: none;
+            /* cursor: pointer; */
+        }
+
+        .nav7:hover {
+            color: rgba(75, 240, 240, 0.919);
+            background-color: rgb(70, 137, 137);
+            border-bottom: 4px solid aqua;
+        }
+
+        .nav7 {
+            flex: 6;
+
+        }
+
+        .login-rj:visited {
+            color: white !important;
+        }
+        .login-rj{
+            text-decoration: none;
+        }
+
+
+        /*電腦版時隱藏選單*/
+        .menu-icon {
+            display: none;
+        }
+
+        .midcontainer {
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            /* 預設為水平方向排列 */
+            justify-content: space-between;
+            align-items: center;
+            /* 讓 .slideshow-container 和 .table Y 軸對齊 */
+            width: 1200%;
+            max-width: 1200px;
+            /* 讓 .midcontainer 大小與 .table 一致 */
+            margin: 310px auto;
+            /* 置中，與其他區塊保持間距 */
+        }
+
+        /*綠燈----------------------------------------------*/
+        .green {
+            width: 10px;
+            display: inline-flex;
+            background-color: rgb(0, 240, 0);
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+            padding: 10px;
+            vertical-align: middle;
+        }
+
+
+        /* RWD 平板尺寸 */
+        @media screen and (max-width:1024px) {
+            .navbarTOP {
+                flex-wrap: wrap;
+                /*讓文字自動換行*/
+            }
+
+            .nav1 {
+                flex: 2;
+                /*logo縮小*/
+            }
+
+            .nav2,
+            .nav3,
+            .nav4,
+            .nav5,
+            .nav6,
+            .nav7 {
+                flex: 2;
+                /*清單縮小*/
+            }
+        }
+
+        /* RWD 手機尺寸*/
+        @media screen and (max-width:968px) {
+            #rightlist{
+                display: none;
+            }
+
+            .servers-fornow,
+            .servers {
+                display: none !important;
+            }
+
+            .navbarTOP {
+                left: 0 !important;
+                width: 100% !important;
+                flex-direction: column;
+                /*選單變成直排*/
+                align-items: flex-start;
+                padding: 10px;
+            }
+
+            .navbarHEAD {
+                display: none;
+            }
+
+            .nav2,
+            .nav3,
+            .nav4,
+            .nav5,
+            .nav6,
+            .nav7 {
+                display: none;
+                /*於手機尺寸時隱藏*/
+            }
+
+            /*按鈕*/
+            .menu-icon {
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 10px;
+                cursor: pointer;
+                font-size: 30px;
+                padding: 10px;
+                background-color: black;
+                color: white;
+                border-radius: 5px;
+                text-align: center;
+            }
+
+
+            /*下拉式選單手機板*/
+            .dropdown-menu {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                background-color: rgba(7, 91, 91, 0.919);
+                /*和nav同顏色*/
+                width: 200px;
+                text-align: center;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            }
+
+            .dropdown-menu a {
+                display: block;
+                padding: 10px;
+                border-bottom: 1px solid gray;
+                font-weight: bold;
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+                background-color: rgba(7, 91, 91, 0.919)
+            }
+
+            .dropdown-menu.active {
+                display: block !important;
+            }
+
+            .dropdown-menu a:hover {
+                background-color: lightgray;
+            }
+
+
+
+
+
+            /* navtop----------------------------------------------------------- */
+        }
+
+        .centerimg {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 99vw;
+            object-fit: cover;
+            z-index: -1;
+            transition: opacity 0.5s ease-in-out;
+            filter: blur(3px);
+        }
+
+        .servers-container {
+            z-index: 1;
+            position: absolute;
+            display: inline-block;
+            text-align: center;
+            top: 60px;
+            right: 300px;
+            margin-top: 80px;
+        }
+
+
+
+        .servers {
+            display: block;
+            z-index: 10;
+            background-image: url(../圖片素材/servers-removebg-preview.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            /* top: 200px; */
+            /* right: 0%; */
+            margin: 0;
+        }
+
+        .servers img {
+            display: block !important;
+        }
+
+        .servers:hover {
+            display: flex;
+            z-index: 1;
+            transform: scale(1.1);
+            cursor: pointer;
+            max-width: 220px;
+        }
+
+        .servers-fornow {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            margin-top: 20px;
+            top: 180px;
+            /* 確保在圖片下方 */
+            left: 110px;
+            transform: translateX(-50%);
+            width: 250px;
+            /* 固定最大寬度，防止超出螢幕 */
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            white-space: normal;
+            /* 允許換行 */
+            font-size: 16px;
+            text-align: center;
+            z-index: 10;
+
+
+        }
+
+        .servers-fornow div {
+            display: block;
+            padding: 5px, 0;
+            border-bottom: 1px soild rgb(0, 0, 0);
+        }
+
+        .servers-addition,
+        .servers-addition-2 {
+            display: block;
+            padding: 8px, 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            word-break: break-word;
+            /* 添加分隔線 */
+        }
+
+        .servers-fornow:last-child {
+            border-bottom: none;
+            /* 移除最後一行的分隔線 */
+        }
+
+        .servers-container:hover .servers-fornow {
+            display: block;
+
+        }
+
+        .midimg {
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            left: 0px;
+            width: 1500px;
+            top: -200px;
+        }
+
+

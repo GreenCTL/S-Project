@@ -1,0 +1,41 @@
+https://www.youtube.com/watch?v=A6LVdnpjE3k&list=PLb-1bRwwEmjr1nJFQoI-cvolXQWnu5_i7&index=32
+
+小專成品要留到面試階段當作品
+
+AI工具:
+chatgpt
+midjourney
+
+icon:
+https://icons.getbootstrap.com/#install
+
+表格:
+https://getbootstrap.com/docs/5.2/content/tables/
+
+
+emmet(快速寫法):
+https://pjchender.blogspot.com/2016/07/emmet.html
+https://docs.emmet.io/cheat-sheet/
+
+尺寸:
+https://getbootstrap.com/docs/5.2/layout/breakpoints/#available-breakpoints
+
+Bootstrap5.3:
+https://getbootstrap.com/
+
+使用工具:
+HTML、CSS、Javascript、novel.js、react.js、boostrap
+
+1.19:30
+2.33:40  使用react
+3.52:15
+4.1:15:45  崁入youtube影片
+5.1:26:20  表單填寫
+6.1:44:07 、2:00:40 購物車
+7.1:46:46  登出後 自動跳轉
+8 2:21:24  爬蟲
+
+
+
+購物車畫面移動:
+C:\Users\User\Desktop\CSS\50_position

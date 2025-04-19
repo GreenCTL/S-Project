@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 登入驗證尚未製作 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css2.css">
+    <title>故事背景</title>
+    <style>
+        .wrapper {
+            min-height: 100vh;
+            /* 讓 wrapper 至少與視窗一樣高 */
+            display: flex;
+            flex-direction: column;
+            margin: 100px;
+        }
+
+        .centerbody {
+            flex: 1;
+            font-size: 20px;
+            z-index: 2;
+            font-weight: bold;
+            /* display: flex; */
+            position: relative;
+            margin: -80px 80px auto 80px;
+            left: 300px;
+            height: 1000px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            width: 800px;
+            color: aliceblue;
+            background-color: rgb(3, 63, 63);
+            border-radius: 5px;
+        }
+
+        .leftinfo {
+            color: aliceblue;
+            font-weight: bold;
+            background-color: rgb(3, 63, 63);
+            position: relative;
+            width: 300px;
+            top: 200px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+        }
+
+        .leftinfo-title {
+            font-size: 25px;
+            text-align: left;
+        }
+
+        .more {
+            text-align: right;
+            justify-content: right;
+            align-items: right;
+            padding-right: 16px;
+            font-size: 16px;
+        }
+
+        .more1 {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .leftinfo-body {
+            font-size: 18px;
+            text-align: left;
+            padding-left: 15px;
+            /* background-color: black; */
+        }
+
+        .centerbody {
+            flex: 1;
+            font-size: 20px;
+            z-index: 2;
+            font-weight: bold;
+            /* display: flex; */
+            position: relative;
+            margin: -80px 80px auto 80px;
+            left: 300px;
+            height: 1000px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            width: 800px;
+            color: aliceblue;
+            background-color: rgb(3, 63, 63);
+            border-radius: 5px;
+        }
+
+        @media screen and (max-width:1400px) {
+            #rightlist {
+                left: 1000px;
+                top: 200px;
+                position: relative;
+                text-align: center;
+            }
+        }
+
+        #rightlist {
+            z-index: 10;
+            color: aliceblue;
+            text-align: center;
+            /* background-color: black; */
+            position: relative;
+            width: 100px;
+            left: 1250px;
+        }
+
+        .right {
+            text-decoration: none;
+            color: white;
+        }
+
+        .right:hover {
+            color: aqua !important;
+            /* background-color: rgba(0, 255, 255, 0.559); */
+        }
+
+        .right:visited {
+            color: white;
+            text-decoration: none;
+        }
+
+        /*footercontainer*/
+        .footerconatiner {
+            margin: auto;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            bottom: 0;
+            padding: 20px;
+        }
+
+        /* ------通訊欄-------------------------------------- */
+        .communication {
+            padding-bottom: -30px;
+            display: block;
+        }
+
+        .communication-text {
+            display: inline-block;
+            color: white;
+
+        }
+
+        .communication-img1 {
+            width: 300px;
+            position: absolute;
+            left: 100px;
+            top: -50px;
+            cursor: pointer;
+        }
+
+        .communication-img2 {
+            width: 300px;
+            position: absolute;
+            left: 446px;
+            top: -50px;
+            cursor: pointer;
+
+        }
+
+        .communication-img3 {
+            width: 300px;
+            position: absolute;
+            left: 782px;
+            top: -50px;
+            cursor: pointer;
+
+        }
+
+        .communication-img4 {
+            width: 300px;
+            position: absolute;
+            left: 1106px;
+            top: -50px;
+            cursor: pointer;
+
+        }
+
+
+        /* footer---------------------------------------------------------------- */
+        .footer {
+            position: relative;
+            bottom: 20px;
+            width: 1400px;
+            height: 300px;
+
+        }
+
+        .footer-text {
+            width: 800px;
+            font-size: 12px;
+            position: relative;
+            bottom: 90px;
+            justify-content: center;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.432);
+            bottom: 10px;
+            left: 300px;
+
+        }
+
+        .footer-img {
+            position: relative;
+            bottom: -80px;
+        }
+
+        .footer-img2 {
+            position: relative;
+            bottom: 150px;
+            left: 1100px;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <link rel="icon" href="../圖片素材/nMnXJWBh8FlFV4QCJwWDyhG43tEqgG2x.ico" type="image/ico">
+</head>
+
+<body>
+
+    <body style="background-color: black;">
+        <!--navbarTOP------------------------------------------------------------------------------------------->
+        <nav class="navbarTOP">
+            <div class="nav1"><a href="./小專.html"><img class="nav-img" title="返回首頁"
+                        src="http://43.226.53.98:88/_images/top_logo.png"></a>
+            </div>
+            <div class="nav2">公告</div>
+            <div class="nav3">遊戲資訊</div>
+            <div class="nav4">排行榜</div>
+            <div class="nav5">遊戲下載</div>
+            <div class="nav6">商城</div>
+            <div class="nav7"><a class="login-rj" href="./會員登入.html">會員登入/註冊</a></div>
+            <!-- 表單(手機板) -->
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <!-- 手機板下拉式選單 -->
+            <div class="dropdown-menu" id="dropdownmenu" style="display: none;">
+                <a href="#">公告</a>
+                <a href="#">遊戲資訊</a>
+                <a href="#">排行榜</a>
+                <a href="#">遊戲下載</a>
+                <a href="#">商城</a>
+                <a href="#">會員登入/註冊</a>
+            </div>
+
+            <div class="navbarHEAD">
+
+                <div class="nav2-1">
+                    <div><a class="navbar-allinfo" href="./全部公告.html">全部公告</a></div>
+                    <div><a class="navbar-info" href="./更新資訊.html">更新資訊</a></div>
+                    <div><a class="navbar-event" href="./活動消息.html">活動消息</a></div>
+                </div>
+                <div class="nav3-1">
+                    <div><a class="navbar-sheet" href="./寵物合成表(龍).html">寵物合成</a></div>
+                    <div><a style="color: white;" class="navbar-event" href="./故事背景.html">故事背景</a></div>
+                    <div><a style="color: white;" class="navbar-event" href="./角色介紹.html">角色介紹</a></div>
+                </div>
+                <div class="nav4-1">
+                    <div>等級排行</div>
+                    <div>寵物排行</div>
+                    <div>vip排行</div>
+                </div>
+                <div class="nav5-1">
+                    <div><a style="color: white;" class="navbar-event" href="../圖片素材/03_qq_symbol-1-250x300.png"
+                            download>客戶端下載</a></div>
+                    <div><a class="navbar-event" href="../圖片素材/3323.png">補丁下載</a></div>
+                    <div><a class="navbar-sheet" href="./安裝教學.html">安裝教學</a></div>
+                </div>
+                <div class="nav6-1">
+                    <div>儲值</div>
+                    <div>通行證</div>
+                    <div>vip獎勵</div>
+                </div>
+        </nav>
+        <!-- nav-------------------------------------------------------- -->
+        <!-- backgroundimg------------------------------------------------------- -->
+
+        <div style="display: inline-block;">
+            <img src="https://i.postimg.cc/GmVpXKMz/c110fba0-ecce-4f39-bc8d-1e723a6aa470.webp"
+                class="centerimg"><!--中央圖片-->
+
+
+            <!-- <div class="servers-container">
+                <a href="#"><img src="https://i.postimg.cc/L6Bv9M3r/servers-removebg-preview.png" class="servers"></a>
+                <div class="servers-fornow">
+                    <div class="servers-addition">
+                        伺服器狀況:良好
+                        <span class="green"></span>
+                    </div>
+                    <div class="servers-addition-2">
+                        EXP倍率:30倍
+                        <br>
+                        GP倍率:30倍
+                        <br>
+                        寵物掉落率:30倍
+                        <br>
+                        道具掉落率:30倍
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="wrapper">
+            <!-- 左側資訊欄 -->
+            <div class="leftinfo">
+                <div class="leftinfo-title">
+                    <img style="width: 50px;height: 50px;" src="../圖片素材/desplufeer.png">
+                    熱門動態
+                </div>
+                <div class="more"><a class="more1" href="./全部公告.html">查看更多</a></div><br>
+                <div class="leftinfo-body">
+                    3/1日前，贈送共鳴套裝一階<br><br>
+                    遊戲設置與導覽<br><br>
+                    補丁安裝下載教學<br><br>
+                    高級版、豪華版通行證獎勵內容<br><br>
+
+                </div>
+            </div>
+            <!-- 中間主頁 -->
+            <div class="centerbody">
+                <div style="font-size: 35px;">故事背景</div>
+                <div class="centerbody-title" style="visibility: hidden;">
+                    <div>標題</div>
+                    <div>日期</div>
+                </div>
+                <div style="display: flex;
+                justify-content: start;
+                text-align: justify;
+                text-justify: inter-word;
+                text-align: justify;
+                padding: 20px;
+                text-justify: inter-word;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                line-height: 1.8;;">
+
+
+                    <div>
+                        <img src="../圖片素材/awjj0-20j27.png" width="30px" height="30px"
+                            style="padding-left: 20px;">精靈的起源<br>
+                        <p style="width: 60%;padding: 20px;">
+                            有一天，「精靈族」從天上降臨到這個世界，他們利用神奇的機器與力量，一夜之間建立了一個巨大的城市，並在城市中心種植了一顆大樹。當時精靈族嚴禁過著部落生活的人類，進入這個新興的城市。但是後來因為精靈們需要人類的勞動力，於是開始僱用他們進入自己的城市。
+                        </p>
+                        <img src="../圖片素材/image_05.png"
+                            style="position: relative;margin-left: 500px;margin-top: -250px;z-index: -1;">
+                        <div style="position: relative;padding-left: 20px;top: -200px;"><img
+                                src="../圖片素材/awjj0-20j27.png" width="30px" height="30px">
+                            生命之樹
+                            <div style="width: 60%;">
+                                <br>精靈族將城市中的巨樹稱為「繁殖的樹」，並且禁止人類靠近！他們利用盤根於各個城市之間的生命之樹樹根，像網路一樣傳送各種的研究資料。他們除了研究如何建立「天島」外，還從城市周圍捕捉動物和植物進行實驗，企圖創造出全新的生命體，但是研究出現了意料之外的情況，有部份因實驗失敗而產生的生物成功逃出了實驗室並開始在野外生活，而這些變異的實驗體，被人類稱之為「MONSTER」。<br><br>
+                            </div>
+                            <img src="../圖片素材/awjj0-20j27.png" width="30px" height="30px">人類的崛起與災難之夜<br><br>
+                            <div style="width: 90%;padding-left: 20px;">
+                                半精靈是人類和精靈結合所誕生出來的種族。半精靈最大的特徵，就是有著漂亮的外表和一雙尖尖的耳朵，而他們的壽命是人類的3倍，只是半精靈的地位也和人類一樣，受到精靈族歧視，只能得到和怪物一樣的待遇。這群長期被精靈欺壓的人類和半精靈，心中的仇恨也漸漸地強烈起來...
+                                終於在某天，半精靈與人類結盟，開始大肆攻擊精靈賴以維生的「繁殖的樹」，他們將其徹底的破壞，但沒想到「繁殖的樹」竟然因此而爆炸了！爆炸所產生的強大能量，喚醒了一直封存在研究室中的異變怪物，脫離石化狀態的怪物們開始在城市裡橫行並瘋狂的進行破壞。精靈們在無法阻擋這些怪物的情況下，竟捨棄了自己的家園，逃往了尚未開發完成的空中之城(天島樂園)，而留下怪物、人類與半精靈在這塊土地上...
+                                <br><br>
+
+                            </div>
+                            <img src="../圖片素材/awjj0-20j27.png" width="30px" height="30px">人類的王國<br><br>
+                            <div style="width: 90%;padding-left: 20px;">
+                                為了避免受到怪物的襲擊，人類和半精靈分別逃往了精靈族在過去於各地建立的村莊，並逐步地劃分出屬於自己的領地。而怪物們為了擁有一處棲身之地也不甘示弱，漸漸地聚集成為一股勢力，與人類互相對抗。其中一名曾經受過精靈族賞識而接受洗禮的人類－喬普，召集了部分有能力、有智慧的人類和半精靈人，並集結了所有願意追隨他的人，建立了「瑪吉麗塔」王國。自此之後，其他有能力的人類和半精靈也仿傚喬普建立了魯迪斯、梅克麗塔等國家...由此「王國時代」正式降臨。
+                            </div>
+                            <img src="../圖片素材/image_06.png" style="position: relative;left: 280px;">
+                            <div>
+                                <img src="../圖片素材/awjj0-20j27.png" width="30px" height="30px">MIX<br><br>
+                                <div style="padding-left: 20px;width: 90%;">
+                                    目前讓喬普國王最感到頭痛的事情，就是城外的怪物不斷地威脅著瑪吉麗塔王國的安寧！終於有一天，人們想起曾經在精靈的居住地裡見過能控制怪物的機器，因此便打算再次進入精靈城尋找控制怪物的方法...於是喬普國王召集了王國裡的精英，組成了強大的軍隊再次向精靈城市進發。只是王國軍遭受到城中怪物們的猛烈的襲擊，損失慘重...
+                                    不過，軍隊亦幸不辱命地帶回了部分機器和技術文件。之後人們開始按照技術文件中記載的方法製作機器，最終成功製造出「寵物合成器」。這個機器不僅可以讓假死（石化）狀態下的怪物復活並接受人類馴養，還能將2
+                                    隻不同的寵物加以合成，進化成全新、能力更為強大的怪物!
+                                    這些利用機器所馴服的怪物，從此成為了人類的伙伴。證實「寵物合成器」可以成功達到控制怪物的目的後，英明的喬普國王開始在城市中建立專門管理此機器的機構，人們只要通過相關的考試，就可獲得「合成生產者」的稱號和使用合成器「許可證」。此外，國王還鼓勵年輕的勇士接受打獵的訓練，從而取得「打獵許可證」和「獵人」的稱號。取得稱號的人們，擁有狩獵怪物、攜帶、買賣寵物的權利
+                                    ，而且有著不凡的地位。當中最頂尖的獵人，更被尊稱為「 Mix Master
+                                    」。寵物合成機器、合成生產者與獵人的成功例子，很快就被其它國家所發現，於是各國的人們紛紛前往瑪吉麗塔學習。因為這裡有著一位最早獲得打獵許可證，同時也是世界上最著名的獵人－瑪吉麗塔的國王「喬普」
+                                    。</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <!-- 右側功能欄 -->
+            <div id="rightlist">
+                <a href="#">
+                    <img title="返回頂端" src="../圖片素材/img9.png" style="margin: auto;">
+                </a>
+
+                <div style="background-color: rgba(7, 91, 91, 0.919);border-radius: 5px;font-weight: bold;">
+                    <br>
+                    <div>
+                        <a class="right" href="./小專.html">返回首頁</a>
+                    </div>
+                    <br><br>
+                    <div>
+                        <a class="right" href="./會員註冊.html">註冊帳號</a>
+                    </div>
+                    <br><br>
+                    <div>
+                        <a class="right" href="./寵物合成表(龍).html">寵物合成</a>
+                    </div>
+                    <br><br>
+        
+                    <div>
+                        <a class="right" href="./安裝教學.html">安裝教學</a>
+                    </div>
+                    <br><br>
+                    <div>
+                        <a class="right" style="color: white;" href="javascript:void(0)"
+                            onclick="scrollToFooter()">聯繫客服</a>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+
+
+        <!-- footer----------------------------------- -->
+        <div class="footerconatiner">
+            <div class="communication">
+                <div class="communication-text">
+                    <img class="communication-img1" src="https://i.postimg.cc/zXscsmsL/community-1.png">
+                </div>
+                <div class="communication-text">
+                    <img class="communication-img2" src="https://i.postimg.cc/3w7bwXJY/community-2.png">
+                </div>
+                <div class="communication-text">
+                    <img class="communication-img3" src="https://i.postimg.cc/3x2c7Sht/community-3.png">
+
+                </div>
+                <div class="communication-text">
+                    <img class="communication-img4" src="https://i.postimg.cc/QN5jLpM0/community-4.png">
+
+                </div>
+            </div>
+
+
+
+            <div class="footer" id="footer">
+                <a href="#">
+                    <img class="footer-img" src="https://i.postimg.cc/JzrxtdTt/top-logo.png">
+                </a>
+                <div class="footer-text">奇幻寶貝Mixmaster為一款Q版的角色扮演RPG遊戲，戰鬥方式為控制主角和多個寵物同時進行戰鬥<br>
+                    能夠朋友們共同進行對戰、交換寵物、市集擺攤等多種互動方式
+                    藉由"合成"更強力的寵物，以一起打敗各個地域的頭目為目標吧!<br><br>
+                    本遊戲的分級制度為6+保護級，請注意遊玩時間，勿沉迷於遊戲<br>
+                    本商城主要以微信支付為主，請小心任何詐騙形式的儲值方式!<br><br>
+                    ©2025 Mixmaster NAVIGATION 保留所有權利<br>
+                    Copyright © NAV.Corp <br> <br>
+                    如有任何問題，請洽官方資訊:aaaaaa55589@gmail.com<br>
+                </div>
+                <div>
+                    <img class="footer-img2" src="https://i.postimg.cc/D0vckhFT/image.png">
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- js------------------------------------------ -->
+        <script>
+            function toggleMenu() {
+                let menu = document.getElementById("dropdownmenu");
+                menu.classList.toggle("active") /*切換menu*/
+            }
+        </script>
+
+        <script>  /*下選單對齊上選單*/
+            function updateNavbarHeadPosition() {
+                if (window.innerWidth > 968) {
+                    // 只在桌機版計算對齊
+                    let nav2 = document.querySelector('.nav2')?.getBoundingClientRect();
+                    let nav6 = document.querySelector('.nav6')?.getBoundingClientRect();
+
+                    document.documentElement.style.setProperty('--nav2-left', `${nav2.left}px`);
+                    document.documentElement.style.setProperty('--navbar-width', `${nav6.right - nav2.left}px`);
+
+                    navbarHEAD.style.display = "flex"; // 桌機版顯示
+                } else {
+                    navbarHEAD.style.display = "none"; // 手機版完全隱藏
+                }
+            };
+            window.addEventListener("load", updateNavbarHeadPosition)
+            window.addEventListener("resize", updateNavbarHeadPosition)
+        </script>
+
+        <script> /*畫面往下時，背景圖片隱藏*/
+            window.addEventListener("scroll", function () {
+                let centerImg = document.querySelector(".centerimg")
+                if (window.scrollY > 200) {
+                    centerImg.style.opacity = "0"
+                } else {
+                    centerImg.style.opacity = "1"
+                }
+            })
+        </script>
+
+        <script>/*右側功能欄會隨著畫面移動且具有延遲效果*/
+            document.addEventListener("DOMContentLoaded", function () {
+                let redDiv = document.getElementById("rightlist");
+
+                let targetTop = -3200; // 預設在 top: 120px;
+                let currentTop = targetTop; // 目前位置
+                let speed = 0.6; // 跟隨速度，數值越小延遲越大
+
+                window.addEventListener("scroll", function () {
+                    targetTop = -3200 + window.scrollY * 1; // 讓圖片稍微跟隨滾動，但不完全同步
+                });
+
+                function smoothScroll() {
+                    currentTop += (targetTop - currentTop) * speed; // 漸進移動到目標位置
+                    redDiv.style.top = currentTop + "px";
+                    requestAnimationFrame(smoothScroll);
+                }
+
+                smoothScroll();
+            });
+        </script>
+        <script>//跳至底部，且平滑移動
+            function scrollToFooter() {
+                document.getElementById("footer").scrollIntoView({ behavior: "smooth" })
+            }
+        </script>
+        <script>
+            window.onload = function () { //檢查會員是否登入 已登入=>更改icon
+                let currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
+                let loginNav = document.querySelector(".login-rj"); // 找到「會員登入/註冊」的 <a> 標籤
+    
+                if (currentUser) { // 用戶已登入
+                    loginNav.innerHTML = `<img src="../圖片素材/login.jpg" alt="會員" style="width: 40px; height: 40px; border-radius: 50%;">`;
+                    loginNav.href = "#"; // 避免點擊跳轉
+                    loginNav.style.cursor = "pointer";
+    
+                    // 點擊會員 Icon 進行登出
+                    loginNav.addEventListener("click", function () {
+                        let confirmLogout = confirm("確定要登出嗎？");
+                        if (confirmLogout) {
+                            localStorage.removeItem("currentUser");
+                            window.location.reload();
+                        }
+                    });
+                }
+            };
+        </script>
+    
+    </body>
+
+</html>

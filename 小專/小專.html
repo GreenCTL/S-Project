@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MM獵人官方網站-主頁</title>
+    <link rel="stylesheet" href="./css2.css">
+    <style>
+        /*右側功能欄*/
+        #rightlist {
+            z-index: 10;
+            color: aliceblue;
+            text-align: center;
+            /* background-color: black; */
+            position: relative;
+            width: 100px;
+            left: 1380px;
+        }
+
+        .right {
+            text-decoration: none;
+        }
+
+        .right:hover {
+            color: aqua !important;
+            /* background-color: rgba(0, 255, 255, 0.559); */
+        }
+
+        .right:visited {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* ------通訊欄-------------------------------------- */
+        .communication {
+            padding-bottom: -30px;
+            display: block;
+        }
+
+        .communication-text {
+            display: inline-block;
+            color: white;
+
+        }
+
+        .communication-img1 {
+            width: 300px;
+            position: absolute;
+            left: 100px;
+            top: -50px;
+            cursor: pointer;
+        }
+
+        .communication-img2 {
+            width: 300px;
+            position: absolute;
+            left: 446px;
+            top: -50px;
+            cursor: pointer;
+
+        }
+
+        .communication-img3 {
+            width: 300px;
+            position: absolute;
+            left: 782px;
+            top: -50px;
+            cursor: pointer;
+
+        }
+
+        .communication-img4 {
+            width: 300px;
+            position: absolute;
+            left: 1106px;
+            top: -50px;
+            cursor: pointer;
+
+        }
+
+
+        /* footer---------------------------------------------------------------- */
+        .footer {
+            position: relative;
+            bottom: 20px;
+            width: 1400px;
+            height: 300px;
+
+        }
+
+        .footer-text {
+            width: 800px;
+            font-size: 12px;
+            position: relative;
+            bottom: 90px;
+            justify-content: center;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.432);
+            bottom: 10px;
+            left: 300px;
+
+        }
+
+        .footer-img {
+            position: relative;
+            bottom: -80px;
+        }
+
+        .footer-img2 {
+            position: relative;
+            bottom: 150px;
+            left: 1100px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .footerconatiner {
+            margin: auto;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .dr:visited {
+            color: white;
+
+        }
+
+        .dr:focus,
+        .dr:active {
+            outline: none;
+            border: none;
+        }
+
+        /* .first-img {
+            position: relative;
+            width: 800px;
+            height: 500px;
+            top: 100px;
+            left: 90px;
+
+        } */
+
+        .table {
+            flex: none;
+            width: 500px;
+            max-width: 500px;
+            min-width: 500px;
+            color: white;
+            background-color: rgba(1, 31, 38, 0.933);
+            /* border: solid black 3px; */
+            border-radius: 5px;
+            height: 345px;
+            bottom: 0;
+
+        }
+
+        .td-title {
+            color: wheat;
+            font-size: 30px;
+            text-align: center;
+            border-bottom: 2px solid rgb(245, 245, 245);
+        }
+
+        .td-title-a {
+            color: wheat;
+            text-decoration: none;
+        }
+
+        .td1 {
+            display: block;
+            text-align: center;
+            border: 5px rgba(255, 255, 255, 0) solid;
+        }
+
+        .info {
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .info:visited {
+            color: white;
+        }
+
+        .info:hover {
+            color: rgb(17, 129, 129);
+            text-decoration: underline;
+        }
+
+        .info:checked {
+            color: black;
+        }
+
+        .td3 {
+            display: block;
+            text-align: right;
+            font-size: 12px;
+            padding-right: 10px;
+        }
+
+
+
+
+
+
+        @media screen and (max-width:1400px) {
+            .midcontainer {
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                max-width: 1200px;
+                /* 確保寬度統一 */
+            }
+
+            .slideshow-container {
+                width: 600px;
+                max-width: 600px;
+            }
+
+            .table {
+                width: 600px;
+                max-width: 600px;
+                margin-top: 20px;
+            }
+
+            .dot-container {
+                left: calc(50%-50px);
+                top: calc(100%50%-50px)
+            }
+
+            .servers-container {
+                right: 30px;
+            }
+
+            .pet-sheet-mixed {
+                width: 700px;
+                left: 30px;
+            }
+
+            .midimg {
+                top: -300px;
+            }
+
+            #rightlist {
+                left: 1000px;
+                top: 100px;
+                position: relative;
+                text-align: center;
+            }
+        }
+
+
+
+        /* 幻燈片------------------------------------------- */
+        * {
+            box-sizing: border-box;
+
+        }
+
+        /* Slideshow container */
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        .slideimg {
+            vertical-align: middle;
+            width: 100%;
+            height: 400px;
+
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            flex: none;
+            width: 600px;
+            margin-right: 60px;
+            max-width: 600px;
+            min-width: 300px;
+            /* 設定最大寬度 */
+
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: relative;
+            top: -200px;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transform: translateY(-50%);
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            left: 512px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot-container {
+            display: flex;
+            justify-content: center;
+            /* background-color: aqua; */
+            width: auto;
+            text-align: center;
+            margin-top: 10px;
+            bottom: 10px;
+            left: 20px;
+            position: relative;
+            transform: translateY(-50%);
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            /* position: relative; */
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+
+
+
+
+        /* --------------寵物合成表------------------------------------- */
+
+
+        .pet-sheet-mixed {
+            z-index: 0;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            left: 100px;
+            top: -200px;
+            width: 1310px;
+            height: auto;
+            /* background-image: url("https://i.postimg.cc/FK0bFTPH/mixmaster-tcg-wallpaper-11.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% ; */
+            background-color: rgba(1, 31, 38, 0.933);
+        }
+
+        .pet-title-container {
+            position: relative;
+            margin-left: 30px;
+        }
+
+        .pet-sheet {
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            margin-top: 30px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .pet-sheet-mixed-title {
+            font-size: 40px;
+            font-weight: bold;
+            display: flex;
+            margin-top: 30px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* .pet-sheet-img{
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        } */
+
+        .on1-1,
+        .on1-2,
+        .on1-3,
+        .on1-4,
+        .on3-1,
+        .on3-2,
+        .on3-3,
+        .on3-4 {
+            list-style: none;
+            display: inline-block;
+            align-items: center;
+            justify-items: center;
+            cursor: pointer;
+        }
+
+
+        .on-1 {
+            list-style: none;
+            display: inline-block;
+            margin: 3px;
+            width: 400px;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .on-2 {
+            list-style: none;
+            display: display;
+            flex-wrap: wrap;
+        }
+
+        .on-3 {
+            list-style: none;
+            display: inline-block;
+            margin: 3px;
+            flex-wrap: wrap;
+            width: 400px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hench {
+            display: inline-block;
+            position: relative;
+            left: -120px;
+        }
+
+        .youtube {
+            margin-top: -200px;
+            margin-left: 40px;
+            display: block;
+        }
+    </style>
+    <link rel="icon" href="../圖片素材/nMnXJWBh8FlFV4QCJwWDyhG43tEqgG2x.ico" type="image/ico">
+</head>
+
+<body style="background-color: black;">
+    <!--navbarTOP------------------------------------------------------------------------------------------->
+    <nav class="navbarTOP">
+        <div class="nav1"><a href="./小專.html"><img class="nav-img" title="返回首頁"
+                    src="https://i.postimg.cc/m2QZ98VH/top-logo.png"></a></div>
+        <div class="nav2">公告</div>
+        <div class="nav3">遊戲資訊</div>
+        <div class="nav4">排行榜</div>
+        <div class="nav5">遊戲下載</div>
+        <div class="nav6">商城</div>
+        <div class="nav7"><a class="login-rj" href="./會員登入.html">會員登入/註冊</a></div>
+        <!-- 表單(手機板) -->
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <!-- 手機板下拉式選單 -->
+        <div class="dropdown-menu" id="dropdownmenu" style="display: none;">
+            <a href="#">公告</a>
+            <a href="#">遊戲資訊</a>
+            <a href="#">排行榜</a>
+            <a href="#">遊戲下載</a>
+            <a href="#">商城</a>
+            <a href="#">會員登入/註冊</a>
+        </div>
+        <div class="navbarHEAD">
+
+            <div class="nav2-1">
+                <div><a class="navbar-allinfo" href="./全部公告.html">全部公告</a></div>
+                <div><a class="navbar-info" href="./更新資訊.html">更新資訊</a></div>
+                <div><a class="navbar-event" href="./活動消息.html">活動消息</a></div>
+            </div>
+            <div class="nav3-1">
+                <div><a class="navbar-sheet" href="./寵物合成表(龍).html">寵物合成</a></div>
+                <div><a style="color: white;" class="navbar-event" href="./故事背景.html">故事背景</a></div>
+                <div><a style="color: white;" class="navbar-event" href="./角色介紹.html">角色介紹</a></div>
+            </div>
+            <div class="nav4-1">
+                <div>等級排行</div>
+                <div>寵物排行</div>
+                <div>vip排行</div>
+            </div>
+            <div class="nav5-1">
+                <div><a style="color: white;" class="navbar-event" href="../圖片素材/03_qq_symbol-1-250x300.png"
+                        download>客戶端下載</a></div>
+                <div><a class="navbar-event" href="../圖片素材/3323.png">補丁下載</a></div>
+                <div><a class="navbar-sheet" href="./安裝教學.html">安裝教學</a></div>
+            </div>
+            <div class="nav6-1">
+                <div>儲值</div>
+                <div>通行證</div>
+                <div>vip獎勵</div>
+            </div>
+    </nav>
+    <!-- nav-------------------------------------------------------- -->
+    <!-- backgroundimg------------------------------------------------------- -->
+
+    <div style="display: inline-block;">
+        <img src="https://i.postimg.cc/GmVpXKMz/c110fba0-ecce-4f39-bc8d-1e723a6aa470.webp" class="centerimg"><!--中央圖片-->
+        <div class="servers-container">
+            <a href="#"><img src="https://i.postimg.cc/L6Bv9M3r/servers-removebg-preview.png" class="servers"></a>
+            <div class="servers-fornow">
+                <div class="servers-addition">
+                    伺服器狀況:良好
+                    <span class="green"></span>
+                </div>
+                <div class="servers-addition-2">
+                    EXP倍率:30倍
+                    <br>
+                    GP倍率:30倍
+                    <br>
+                    寵物掉落率:30倍
+                    <br>
+                    道具掉落率:30倍
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 幻燈片------------------------------------------------------ -->
+    <!-- Slideshow container -->
+    <div class="midcontainer">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img class="slideimg" src="../圖片素材/aym03-y8bde.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img class="slideimg" src="../圖片素材/aqnhd-ginj2.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img class="slideimg" src="../圖片素材/未命名123.png" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            <div class="dot-container" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+        </div>
+        <br>
+
+
+
+        <!-- ----news ----------------------------------------------->
+
+
+        <table class="table">
+            <tr>
+                <td class="td-title" colspan="3"><a class="td-title-a" href="./全部公告.html">公告專區</a></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="td1">活動</td>
+                <td><a class="info" href="./活動一.html">
+                        全新活動地圖boss來襲</a>
+                </td>
+                <td class="td3">2/18</td>
+            </tr>
+
+            <tr>
+                <td class="td1">更新</td>
+                <td><a class="info" href="./更新資訊.html">
+                        小怪產生機制調整
+                    </a>
+                </td>
+                <td class="td3">2/18</td>
+            </tr>
+            <tr>
+                <td class="td1">活動</td>
+                <td>
+                    <a class="info" href="./活動消息.html">
+                        即日起，完成指定任務免費領取"變異卡魯坤"
+                    </a>
+                </td>
+                <td class="td3">2/18</td>
+            </tr>
+            <tr>
+                <td class="td1">活動</td>
+                <td>
+                    <a class="info" href="./活動消息.html">
+                        一階套裝免費領取
+                    </a>
+                </td>
+                <td class="td3">2/18</td>
+
+            </tr>
+            <tr>
+                <td class="td1">更新</td>
+                <td>
+                    <a class="info" href="./更新資訊.html">
+                        小怪產生機制的頻率
+                    </a>
+                </td>
+                <td class="td3">2/18</td>
+            </tr>
+        </table>
+    </div>
+    <div class="youtube"><!--中間影片-->
+        <iframe width="1400px" height="500px"
+            src="https://www.youtube.com/embed/XDZaCkD-DK8?autoplay=1&mute=1&loop=1&playlist=XDZaCkD-DK8&rel=0"
+            frameborder="0" allow="autoplay;encrypted-media">
+
+        </iframe>
+    </div>
+    <div id="rightlist"><!--右側功能欄-->
+        <a href="#">
+            <img title="返回頂端" src="../圖片素材/img9.png" style="margin: auto;">
+        </a>
+
+        <div style="background-color: rgba(7, 91, 91, 0.919);border-radius: 5px;font-weight: bold;">
+            <br>
+            <div>
+                <a class="right" href="./小專.html">返回首頁</a>
+            </div>
+            <br><br>
+            <div>
+                <a class="right" href="./會員註冊.html">註冊帳號</a>
+            </div>
+            <br><br>
+            <div>
+                <a class="right" href="./寵物合成表(龍).html">寵物合成</a>
+            </div>
+            <br><br>
+
+            <div>
+                <a class="right" href="./安裝教學.html">安裝教學</a>
+            </div>
+            <br><br>
+            <div>
+                <a class="right" style="color: white;" href="javascript:void(0)" onclick="scrollToFooter()">聯繫客服</a>
+            </div>
+            <br>
+        </div>
+    </div>
+
+
+    <div><img class="midimg" src="../圖片素材/333.png"></div>
+
+
+    <!-- ----寵物合成表 ----------------------------------------------->
+
+    <div class="pet-sheet-mixed">
+        <div class="pet-text" style="color: white;">
+            <div class="pet-title-container">
+                <div class="pet-sheet-mixed-title">寵物合成表</div>
+                <p class="pet-sheet">預覽所有寵物合成</p>
+            </div>
+            <ul class="on-1">
+                <li class="on1-1" style="margin: 20px;">
+                    <a href="./寵物合成表(龍).html">
+                        <img src="https://www.newlrmm.cn/themes//Pages/Mix/0.gif">
+                    </a>
+                    <br>
+                    </a>
+
+                    <p class="dr" style="font-weight: bold;">龍</p>
+
+                </li>
+                <li class="on1-2" style="margin: 20px;">
+                    <img src="https://www.newlrmm.cn/themes//Pages/Mix/2.gif">
+                    <p style="font-weight: bold;">獸</p>
+                </li>
+                <li class="on1-3" style="margin: 20px;">
+                    <img src="https://www.newlrmm.cn/themes//Pages/Mix/3.gif">
+                    <p style="font-weight: bold;">鳥</p>
+
+                </li>
+                <li class="on1-4" style="margin: 20px;">
+                    <img src="https://www.newlrmm.cn/themes//Pages/Mix/5.gif">
+                    <p style="font-weight: bold;">植物</p>
+            </ul>
+            <br>
+            <ul class="on-3">
+                </li>
+                <li class="on3-1" style="margin: 20px;">
+                    <img src="https://www.newlrmm.cn/themes//Pages/Mix/1.gif">
+                    <p style="font-weight: bold;">惡魔</p>
+                </li>
+                <li class="on3-2" style="margin: 20px;">
+                    <img src="https://www.newlrmm.cn/themes//Pages/Mix/7.gif">
+                    <p style="font-weight: bold;">機械</p>
+
+                </li>
+                <li class="on3-3" style="margin: 20px;">
+                    <img src="https://www.newlrmm.cn/themes//Pages/Mix/6.gif">
+                    <p style="font-weight: bold;">神秘</p>
+
+                </li>
+                <li class="on3-4" style="margin: 30px;">
+                    <img src="https://www.newlrmm.cn/themes//Pages/Mix/4.gif">
+                    <p style="font-weight: bold;">蟲</p>
+                </li>
+                <img class="hench" src="../圖片素材/hench_x8 拷貝.png">
+            </ul>
+        </div>
+    </div>
+
+    <div class="footerconatiner">
+        <div class="communication">
+            <div class="communication-text">
+                <img class="communication-img1" src="https://i.postimg.cc/zXscsmsL/community-1.png">
+            </div>
+            <a href="https://qm.qq.com/q/5I43J4LkOI">
+                <div class="communication-text">
+
+                    <img class="communication-img2" src="https://i.postimg.cc/3w7bwXJY/community-2.png">
+                </div>
+            </a>
+            <div class="communication-text">
+                <img class="communication-img3" src="https://i.postimg.cc/3x2c7Sht/community-3.png">
+
+            </div>
+            <div class="communication-text">
+                <img class="communication-img4" src="https://i.postimg.cc/QN5jLpM0/community-4.png">
+
+            </div>
+        </div>
+
+
+
+        <div class="footer" id="footer">
+            <a href="#">
+                <img class="footer-img" src="https://i.postimg.cc/JzrxtdTt/top-logo.png">
+            </a>
+            <div class="footer-text">奇幻寶貝Mixmaster為一款Q版的角色扮演RPG遊戲，戰鬥方式為控制主角和多個寵物同時進行戰鬥<br>
+                能夠朋友們共同進行對戰、交換寵物、市集擺攤等多種互動方式
+                藉由"合成"更強力的寵物，以一起打敗各個地域的頭目為目標吧!<br><br>
+                本遊戲的分級制度為6+保護級，請注意遊玩時間，勿沉迷於遊戲<br>
+                本商城主要以微信支付為主，請小心任何詐騙形式的儲值方式!<br><br>
+                ©2025 Mixmaster NAVIGATION 保留所有權利<br>
+                Copyright © NAV.Corp <br> <br>
+                如有任何問題，請洽官方資訊:aaaaaa55589@gmail.com<br>
+            </div>
+            <div>
+                <img class="footer-img2" src="https://i.postimg.cc/D0vckhFT/image.png">
+            </div>
+        </div>
+    </div>
+
+    <!-- js-------------------------------------------------------- -->
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("dropdownmenu");
+            menu.classList.toggle("active") /*切換menu*/
+        }
+    </script>
+
+    <script>  /*下選單對齊上選單*/
+        function updateNavbarHeadPosition() {
+            if (window.innerWidth > 968) {
+                // 只在桌機版計算對齊
+                let nav2 = document.querySelector('.nav2')?.getBoundingClientRect();
+                let nav6 = document.querySelector('.nav6')?.getBoundingClientRect();
+
+                document.documentElement.style.setProperty('--nav2-left', `${nav2.left}px`);
+                document.documentElement.style.setProperty('--navbar-width', `${nav6.right - nav2.left}px`);
+
+                navbarHEAD.style.display = "flex"; // 桌機版顯示
+            } else {
+                navbarHEAD.style.display = "none"; // 手機版完全隱藏
+            }
+        };
+        window.addEventListener("load", updateNavbarHeadPosition)
+        window.addEventListener("resize", updateNavbarHeadPosition)
+
+        // 幻燈片--------------------------------------------------
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        // 畫面往下滑時，背景圖片隱藏
+        window.addEventListener("scroll", function () {
+            let centerImg = document.querySelector(".centerimg")
+            if (window.scrollY > 600) {
+                centerImg.style.opacity = "0"
+            } else {
+                centerImg.style.opacity = "1"
+            }
+        })
+
+    </script>
+    <script>https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js</script>
+
+
+    <script>/*右側功能欄會隨著畫面移動且具有延遲效果*/
+        document.addEventListener("DOMContentLoaded", function () {
+            let redDiv = document.getElementById("rightlist");
+            let targetTop = -1250; // 預設在 top: -900px;
+            let currentTop = targetTop; // 目前位置
+            let speed = 0.6; // 跟隨速度，數值越小延遲越大
+
+            // 讓圖片稍微跟隨滾動，但不完全同步
+            window.addEventListener("scroll", function () {
+                targetTop = -1250 + window.scrollY * 1;
+            });
+
+            function updateTargetTop() {
+                if (window.innerWidth < 1400) {
+                    targetTop = -1000 + window.scrollY * 0.8;
+                } else {
+                    targetTop = -1250 + window.scrollY * 1
+                }
+            }
+
+            function smoothScroll() {
+                currentTop += (targetTop - currentTop) * speed; // 漸進移動到目標位置
+                redDiv.style.top = currentTop + "px";
+                requestAnimationFrame(smoothScroll);
+            }
+
+            // 綁定並啟用滾動和視窗大小變更事件
+            window.addEventListener("scroll", updateTargetTop);
+            window.addEventListener("resize", updateTargetTop);
+
+            smoothScroll();
+        });
+    </script>
+    <script>//跳至底部，且平滑移動
+        function scrollToFooter() {
+            document.getElementById("footer").scrollIntoView({ behavior: "smooth" })
+        }
+    </script>
+    <script>
+        window.onload = function () { //檢查會員是否登入 已登入=>更改icon
+            let currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
+            let loginNav = document.querySelector(".login-rj"); // 找到「會員登入/註冊」的 <a> 標籤
+
+            if (currentUser) { // 用戶已登入
+                loginNav.innerHTML = `<img src="../圖片素材/login.jpg" alt="會員" style="width: 40px; height: 40px; border-radius: 50%;">`;
+                loginNav.href = "#"; // 避免點擊跳轉
+                loginNav.style.cursor = "pointer";
+
+                // 點擊會員 Icon 進行登出
+                loginNav.addEventListener("click", function () {
+                    let confirmLogout = confirm("確定要登出嗎？");
+                    if (confirmLogout) {
+                        localStorage.removeItem("currentUser");
+                        window.location.reload();
+                    }
+                });
+            }
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .regForm {
+      margin: 6rem auto auto auto;
+      background-color: rgba(0, 0, 0, 0.403);
+      width: 600px;
+      border-radius: 5px;
+      color: rgb(230, 237, 245);
+    }
+
+    .tab {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .formtitle {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .re {
+      margin: 2rem auto auto auto;
+      background-color: rgba(0, 0, 0, 0.403);
+      width: 400px;
+      height: 50px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+  </style>
+</head>
+
+<body>
+  <form class="regForm" action="">
+
+    <h1 class="formtitle">奇幻寶貝青春獵人註冊</h1>
+
+    <!-- One "tab" for each step in the form: -->
+    <div class="tab">帳號
+      <p><input placeholder="id..." oninput="this.className = ''"></p>
+    </div>
+
+    <div class="tab">電子信箱
+      <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
+    </div>
+
+
+    <div class="tab">密碼
+      <p><input placeholder="Password..." oninput="this.className = ''"></p>
+      確認密碼
+      <p><input placeholder="Password..." oninput="this.className = ''"></p>
+    </div>
+
+    <div class="tab">電話號碼
+      <p><input placeholder="phone..." oninput="this.className = ''"></p>
+      <button class="re">註冊</button>
+
+      <br>
+      <br>
+      <br>
+      <br>
+    <div>已經擁有會員?<a href="./登入測試.html">登入</a></div>
+  </form>
+
+</body>
+
+</html>

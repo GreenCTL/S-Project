@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 登入驗證尚未製作 -->
+
+<head>
+    <link rel="icon" href="../圖片素材/nMnXJWBh8FlFV4QCJwWDyhG43tEqgG2x.ico" type="image/ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css2.css">
+    <title>會員登入</title>
+    <style>
+        .servers-container {
+            position: relative;
+            left: 1200px;
+            font-weight: bold;
+        }
+
+        .regForm {
+            margin: 10rem auto auto auto;
+            background-color: rgba(0, 0, 0, 0.403);
+            width: 600px;
+            border-radius: 5px;
+            color: rgb(230, 237, 245);
+        }
+
+        .tab {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .formtitle {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .re {
+            margin: 2rem auto auto auto;
+            background-color: rgba(0, 0, 0, 0.403);
+            color: aliceblue;
+            width: 400px;
+            height: 50px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rj:visited {
+            color: white;
+        }
+
+        .rj:active {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body style="background-color: black;">
+        <!--navbarTOP------------------------------------------------------------------------------------------->
+        <nav class="navbarTOP">
+            <div class="nav1"><a href="./小專.html"><img class="nav-img"
+                        src="http://43.226.53.98:88/_images/top_logo.png"></a>
+            </div>
+            <div class="nav2">公告</div>
+            <div class="nav3">遊戲資訊</div>
+            <div class="nav4">排行榜</div>
+            <div class="nav5">遊戲下載</div>
+            <div class="nav6">商城</div>
+            <div class="nav7"><a class="login-rj" href="./會員登入.html">會員登入/註冊</a></div>
+            <!-- 表單(手機板) -->
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <!-- 手機板下拉式選單 -->
+            <div class="dropdown-menu" id="dropdownmenu" style="display: none;">
+                <a href="#">公告</a>
+                <a href="#">遊戲資訊</a>
+                <a href="#">排行榜</a>
+                <a href="#">遊戲下載</a>
+                <a href="#">商城</a>
+                <a href="#">會員登入/註冊</a>
+            </div>
+            <div class="navbarHEAD">
+
+                <div class="nav2-1">
+                    <div><a class="navbar-allinfo" href="./全部公告.html">全部公告</a></div>
+                    <div><a class="navbar-info" href="./更新資訊.html">更新資訊</a></div>
+                    <div><a class="navbar-event" href="./活動消息.html">活動消息</a></div>
+                </div>
+                <div class="nav3-1">
+                    <div><a class="navbar-sheet" href="./寵物合成表(龍).html">寵物合成</a></div>
+                    <div><a style="color: white;" class="navbar-event" href="./故事背景.html">故事背景</a></div>
+                    <div><a style="color: white;" class="navbar-event" href="./角色介紹.html">角色介紹</a></div>
+                </div>
+                <div class="nav4-1">
+                    <div>等級排行</div>
+                    <div>寵物排行</div>
+                    <div>vip排行</div>
+                </div>
+                <div class="nav5-1">
+                    <div><a style="color: white;" class="navbar-event" href="../圖片素材/03_qq_symbol-1-250x300.png"
+                            download>客戶端下載</a></div>
+                    <div><a class="navbar-event" href="../圖片素材/3323.png">補丁下載</a></div>
+                    <div><a class="navbar-sheet" href="./安裝教學.html">安裝教學</a></div>
+                </div>
+                <div class="nav6-1">
+                    <div>儲值</div>
+                    <div>vip獎勵</div>
+                    <div>通行證</div>
+                </div>
+        </nav>
+        <!-- nav-------------------------------------------------------- -->
+        <!-- backgroundimg------------------------------------------------------- -->
+
+        <div style="display: inline-block;">
+            <img src="https://i.postimg.cc/GmVpXKMz/c110fba0-ecce-4f39-bc8d-1e723a6aa470.webp"
+                class="centerimg"><!--中央圖片-->
+            <div class="servers-container" style="display: none;">
+                <a href="#"><img src="https://i.postimg.cc/L6Bv9M3r/servers-removebg-preview.png" class="servers"></a>
+                <div class="servers-fornow">
+                    <div class="servers-addition">
+                        伺服器狀況:良好
+                        <span class="green"></span>
+                    </div>
+                    <div class="servers-addition-2">
+                        EXP倍率:30倍
+                        <br>
+                        GP倍率:30倍
+                        <br>
+                        寵物掉落率:30倍
+                        <br>
+                        道具掉落率:30倍
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form class="regForm" action="">
+
+            <h1 class="formtitle">登入</h1>
+
+            <!-- One "tab" for each step in the form: -->
+            <div class="tab">帳號
+                <p><input id="login-id" oninput="this.className = ''"></p>
+            </div>
+
+            <div class="tab">密碼
+                <p><input id="login-password" type="password" oninput="this.className = ''"></p>
+
+                <button id="login-button" class="re">登入</button>
+                <br>
+                <br>
+                <br>
+
+                <div>還沒有註冊會員?<a class="rj" href="./會員註冊.html">註冊</a>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+
+        </form>
+
+
+
+
+
+        <!-- js------------------------------------------ -->
+        <script>
+            function toggleMenu() {
+                let menu = document.getElementById("dropdownmenu");
+                menu.classList.toggle("active") /*切換menu*/
+            }
+        </script>
+
+        <script>  /*下選單對齊上選單*/
+            function updateNavbarHeadPosition() {
+                if (window.innerWidth > 968) {
+                    // 只在桌機版計算對齊
+                    let nav2 = document.querySelector('.nav2')?.getBoundingClientRect();
+                    let nav6 = document.querySelector('.nav6')?.getBoundingClientRect();
+
+                    document.documentElement.style.setProperty('--nav2-left', `${nav2.left}px`);
+                    document.documentElement.style.setProperty('--navbar-width', `${nav6.right - nav2.left}px`);
+
+                    navbarHEAD.style.display = "flex"; // 桌機版顯示
+                } else {
+                    navbarHEAD.style.display = "none"; // 手機版完全隱藏
+                }
+            };
+            window.addEventListener("load", updateNavbarHeadPosition)
+            window.addEventListener("resize", updateNavbarHeadPosition)
+        </script>
+
+
+        <!-- 登入驗證系統 -->
+        <script>
+            document.getElementById("login-button").addEventListener("click", function () {
+                event.preventDefault();
+                let inputId = document.getElementById("login-id").value.trim()
+                let inputPassword = document.getElementById("login-password").value.trim()
+
+                //當沒有輸入帳號密碼便送出=>請輸入帳號密碼
+                if (inputId === "" || inputPassword === "") {
+                    alert("請輸入帳號與密碼!")
+                    return
+                }
+                if (inputId === "") {
+                    alert("請輸入您的帳號!")
+                    return
+                }
+                if (inputPassword === "") {
+                    alert("請輸入您的密碼!")
+                    return
+                }
+
+                // 取得已經註冊的帳號資料
+                let registeredUsers = JSON.parse(localStorage.getItem("registeredUsers")) || []
+                // 檢查帳號與密碼是否匹配
+                let isValidUser = registeredUsers.some(user => user.id === inputId && user.password === inputPassword)
+                // 儲存user為物件
+                let user = registeredUsers.find(user => user.id ===inputId && user.password === inputPassword)
+
+                console.log("當前使用者列表：", registeredUsers);
+                registeredUsers.forEach(user => {
+                    console.log(`帳號: ${user.id}, 密碼: ${user.password}`);
+                });
+
+
+                // 登入驗證成功=>跳至頁首
+                if (isValidUser) {
+                    console.log("登入成功")
+                    alert("登入成功")
+                    localStorage.setItem("currentUser", JSON.stringify(user));
+                    setTimeout(() => {
+                        console.log("開始跳轉...");
+                        window.location.href = "./小專.html";
+                    }, 500)
+                } else {
+                    alert("您輸入的帳號或密碼有誤")
+                }
+            })
+
+
+            window.onload = function () {//驗證
+                let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+                let loginNav = document.querySelector(".login-rj"); // 找到「會員登入/註冊」的 <a> 標籤
+
+                if (currentUser) { //如果已經登入=>會員登入/註冊改為會員icon
+                    // 用戶已登入 → 改變 UI
+                    loginNav.innerHTML = `<img src="../圖片素材/login.jpg" alt="會員" style="width: 40px; height: 40px; border-radius: 50%;">`;
+                    loginNav.href = "#"; // 避免點擊跳轉
+                    loginNav.style.cursor = "pointer";
+
+                    // 加入登出功能
+                    loginNav.addEventListener("click", function () {
+                        let confirmLogout = confirm("確定要登出嗎？");
+                        if (confirmLogout) {
+                            localStorage.removeItem("currentUser"); // 移除登入狀態
+                            window.location.reload(); // 重新載入頁面
+                        }
+                    });
+                }
+            };
+            
+        </script>
+    </body>
+
+</html>

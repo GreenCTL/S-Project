@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 登入驗證尚未製作 -->
+
+<head>
+    <link rel="icon" href="../圖片素材/nMnXJWBh8FlFV4QCJwWDyhG43tEqgG2x.ico" type="image/ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css2.css">
+    <title>合成表(獸)</title>
+    <style>
+        /* 寵物合成表 */
+        .pet-sheet {
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        .pet-sheet-mixed-title {
+            font-size: 40px;
+            font-weight: bold;
+            display: flex;
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        .pet-sheet-mixed {
+            z-index: 0;
+            display: flex;
+            position: relative;
+            top: 200px;
+            justify-content: center;
+            align-items: center;
+            height: -100px;
+            /* left: -5px; */
+            margin: 75px auto auto auto;
+            /* background-image: url("https://i.postimg.cc/FK0bFTPH/mixmaster-tcg-wallpaper-11.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% ; */
+            background-color: rgba(1, 31, 38, 0.933);
+        }
+
+        .on1-1,
+        .on1-2,
+        .on1-3,
+        .on1-4,
+        .on3-1,
+        .on3-2,
+        .on3-3,
+        .on3-4 {
+            list-style: none;
+            display: inline-block;
+            align-items: center;
+            justify-items: center;
+            cursor: pointer;
+        }
+
+
+
+        .on-2 {
+            list-style: none;
+            display: display;
+            flex-wrap: wrap;
+        }
+
+        .on-1 {
+            list-style: none;
+            display: inline-block;
+            margin: 3px;
+            width: 400px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .on-3 {
+            list-style: none;
+            display: inline-block;
+            margin: 3px;
+            flex-wrap: wrap;
+            width: 400px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .midimg {
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            left: 0px;
+            width: 1500px;
+            top: -200px;
+            margin-top: 180px;
+        }
+
+        /*移動至寵物合成表*/
+        .tosheet:focus {
+            color: black;
+        }
+
+        .tosheet:visited {
+            color: wheat;
+        }
+
+        .tosheet:hover {
+            color: rgb(4, 73, 73);
+            text-decoration: underline;
+        }
+
+        .tosheet {
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        /*寵物合成表本體*/
+
+        .mixbody {
+            position: relative;
+            top: -200px;
+        }
+
+        .pet-sheet-table-title {
+            width: 1400px;
+            margin: auto;
+            font-size: 30px;
+            font-weight: bold;
+            color: wheat;
+            text-decoration: none;
+        }
+
+        .pet-sheet-table-title1 {
+            color: wheat;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .pet-sheet-table-title1:hover {
+            color: rgb(4, 73, 73);
+            cursor: pointer;
+        }
+
+        .pet-sheet-table-title2 {
+            color: wheat;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .pet-sheet-table-title2:hover {
+            color: rgb(4, 73, 73);
+            cursor: pointer;
+        }
+
+        .pet-sheet-table-title3 {
+            color: wheat;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .pet-sheet-table-title3:hover {
+            color: rgb(4, 73, 73);
+            cursor: pointer;
+        }
+
+        .pet-sheet-table-title4 {
+            color: wheat;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .pet-sheet-table-title4:hover {
+            color: rgb(4, 73, 73);
+            cursor: pointer;
+        }
+
+        .pet-sheet-table-title5 {
+            color: wheat;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .pet-sheet-table-title5:hover {
+            color: rgb(4, 73, 73);
+            cursor: pointer;
+        }
+
+        .pet-sheet-table-title6 {
+            color: wheat;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .pet-sheet-table-title6:hover {
+            color: rgb(4, 73, 73);
+            cursor: pointer;
+        }
+
+        .pet-sheet-table-title7 {
+            color: wheat;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .pet-sheet-table-title7:hover {
+            color: rgb(4, 73, 73);
+            cursor: pointer;
+        }
+
+        .pet-sheet-table-title8 {
+            color: wheat;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .pet-sheet-table-title8:hover {
+            color: rgb(4, 73, 73);
+            cursor: pointer;
+        }
+
+        .th1:hover {
+            color: rgb(4, 73, 73);
+            cursor: pointer;
+        }
+
+        .th2:hover {
+            color: rgb(4, 73, 73);
+            cursor: pointer;
+        }
+
+        .th3:hover {
+            color: rgb(4, 73, 73);
+            cursor: pointer;
+        }
+
+        .th4:hover {
+            color: rgb(4, 73, 73);
+            cursor: pointer;
+        }
+
+        .th5:hover {
+            color: rgb(4, 73, 73);
+            cursor: pointer;
+        }
+
+        .th6:hover {
+            color: rgb(4, 73, 73);
+            cursor: pointer;
+        }
+
+        .th7:hover {
+            color: rgb(4, 73, 73);
+            cursor: pointer;
+        }
+
+        .th8:hover {
+            color: rgb(4, 73, 73);
+            cursor: pointer;
+        }
+
+        .mix-bar {
+            color: wheat;
+            margin: auto;
+            width: 1400px;
+            margin-top: 60px;
+            display: table;
+        }
+
+        .mix-bar th,
+        .mix-bar td {
+            padding: 10px;
+            text-align: center;
+            font-weight: normal;
+            border: 3px solid rgb(119, 80, 6);
+        }
+
+        #rightlist {
+            z-index: 10;
+            color: aliceblue;
+            text-align: center;
+            /* background-color: black; */
+            position: relative;
+            width: 100px;
+            left: 1350px;
+        }
+
+        .right {
+            text-decoration: none;
+            color: white;
+        }
+
+        .right:hover {
+            color: aqua !important;
+            /* background-color: rgba(0, 255, 255, 0.559); */
+        }
+
+        .right:visited {
+            color: white;
+            text-decoration: none;
+        }
+        /* footer */
+                /* ------通訊欄-------------------------------------- */
+                .communication {
+            padding-bottom: -30px;
+            display: block;
+        }
+
+        .communication-text {
+            display: inline-block;
+            color: white;
+
+        }
+
+        .communication-img1 {
+            width: 300px;
+            position: absolute;
+            left: 100px;
+            top: -50px;
+            cursor: pointer;
+        }
+
+        .communication-img2 {
+            width: 300px;
+            position: absolute;
+            left: 446px;
+            top: -50px;
+            cursor: pointer;
+
+        }
+
+        .communication-img3 {
+            width: 300px;
+            position: absolute;
+            left: 782px;
+            top: -50px;
+            cursor: pointer;
+
+        }
+
+        .communication-img4 {
+            width: 300px;
+            position: absolute;
+            left: 1106px;
+            top: -50px;
+            cursor: pointer;
+
+        }
+
+        /* footer---------------------------------------------------------------- */
+        .footer {
+            position: relative;
+            bottom: 20px;
+            width: 1400px;
+            height: 300px;
+
+        }
+
+        .footer-text {
+            width: 800px;
+            font-size: 12px;
+            position: relative;
+            bottom: 90px;
+            justify-content: center;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.432);
+            bottom: 10px;
+            left: 300px;
+
+        }
+
+        .footer-img {
+            position: relative;
+            bottom: -80px;
+        }
+
+        .footer-img2 {
+            position: relative;
+            bottom: 150px;
+            left: 1100px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .footerconatiner {
+            margin: auto;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <body style="background-color: rgb(0, 0, 0);">
+        <!--navbarTOP------------------------------------------------------------------------------------------->
+        <nav class="navbarTOP">
+            <div class="nav1"><a href="./小專.html"><img class="nav-img"
+                        src="http://43.226.53.98:88/_images/top_logo.png"></a>
+            </div>
+            <div class="nav2">公告</div>
+            <div class="nav3">遊戲資訊</div>
+            <div class="nav4">排行榜</div>
+            <div class="nav5">遊戲下載</div>
+            <div class="nav6">商城</div>
+            <div class="nav7"><a class="login-rj" href="./會員登入.html">會員登入/註冊</a></div>
+            <!-- 表單(手機板) -->
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <!-- 手機板下拉式選單 -->
+            <div class="dropdown-menu" id="dropdownmenu" style="display: none;">
+                <a href="#">公告</a>
+                <a href="#">遊戲資訊</a>
+                <a href="#">排行榜</a>
+                <a href="#">遊戲下載</a>
+                <a href="#">商城</a>
+                <a href="#">會員登入/註冊</a>
+            </div>
+            <div class="navbarHEAD">
+
+                <div class="nav2-1">
+                    <div><a class="navbar-allinfo" href="./全部公告.html">全部公告</a></div>
+                    <div><a class="navbar-info" href="./更新資訊.html">更新資訊</a></div>
+                    <div><a class="navbar-event" href="./活動消息.html">活動消息</a></div>
+                </div>
+                <div class="nav3-1">
+                    <div><a class="navbar-sheet" href="./寵物合成表(龍).html">寵物合成</a></div>
+                    <div><a style="color: white;" class="navbar-event" href="./故事背景.html">故事背景</a></div>
+                    <div><a style="color: white;" class="navbar-event" href="./角色介紹.html">角色介紹</a></div>
+                </div>
+                <div class="nav4-1">
+                    <div>等級排行</div>
+                    <div>寵物排行</div>
+                    <div>vip排行</div>
+                </div>
+                <div class="nav5-1">
+                    <div><a style="color: white;" class="navbar-event" href="../圖片素材/03_qq_symbol-1-250x300.png" download>客戶端下載</a></div>
+                    <div><a class="navbar-event" href="../圖片素材/3323.png">補丁下載</a></div>
+                    <div><a class="navbar-sheet" href="./安裝教學.html">安裝教學</a></div>
+                </div>
+                <div class="nav6-1">
+                    <div>儲值</div>
+                    <div>通行證</div>
+                    <div>vip獎勵</div>
+                </div>
+        </nav>
+        <!-- nav-------------------------------------------------------- -->
+        <!-- backgroundimg------------------------------------------------------- -->
+
+        <div style="display: inline-block;">
+            <img src="https://i.postimg.cc/GmVpXKMz/c110fba0-ecce-4f39-bc8d-1e723a6aa470.webp"
+                class="centerimg"><!--中央圖片-->
+        </div>
+
+
+        <!-- ----寵物合成表 ----------------------------------------------->
+
+        <div class="pet-sheet-mixed">
+            <div class="pet-text" style="color: white;">
+
+                <div class="pet-sheet-mixed-title">寵物合成表</div>
+                <p class="pet-sheet">預覽所有寵物合成</p>
+
+                <ul class="on-1">
+                    <li class="on1-1" style="margin: 20px;">
+                        <a class="tosheet" href="./寵物合成表(龍).html">
+                            <img src="https://www.newlrmm.cn/themes//Pages/Mix/0.gif">
+                        </a>
+                        <br>
+                        <p style="font-weight: bold;"><a class="tosheet" href="./寵物合成表(龍).html">龍</a></p>
+                    </li>
+                    <li class="on1-2" style="margin: 20px;">
+                        <a class="tosheet" href="#pet-sheet-table-title">
+                            <img src="https://www.newlrmm.cn/themes//Pages/Mix/2.gif">
+                        </a>
+                        <p style="font-weight: bold;"><a class="tosheet" href="#pet-sheet-table-title">獸</a></p>
+                    </li>
+                    <li class="on1-3" style="margin: 20px;font-size: 20px;">
+                        <img src="https://www.newlrmm.cn/themes//Pages/Mix/3.gif">
+                        <p style="font-weight: bold;">鳥</p>
+
+                    </li>
+                    <li class="on1-4" style="margin: 20px;font-size: 20px;">
+                        <img src="https://www.newlrmm.cn/themes//Pages/Mix/5.gif">
+                        <p style="font-weight: bold;">植物</p>
+                </ul>
+                <br>
+                <ul class="on-3">
+                    </li>
+                    <li class="on3-1" style="margin: 20px;font-size: 20px;">
+                        <img src="https://www.newlrmm.cn/themes//Pages/Mix/1.gif">
+                        <p style="font-weight: bold;">惡魔</p>
+                    </li>
+                    <li class="on3-2" style="margin: 20px;font-size: 20px;">
+                        <img src="https://www.newlrmm.cn/themes//Pages/Mix/7.gif">
+                        <p style="font-weight: bold;">機械</p>
+
+                    </li>
+                    <li class="on3-3" style="margin: 20px;font-size: 20px;">
+                        <img src="https://www.newlrmm.cn/themes//Pages/Mix/6.gif">
+                        <p style="font-weight: bold;">神秘</p>
+
+                    </li>
+                    <li class="on3-4" style="margin: 30px;font-size: 20px;">
+                        <img src="https://www.newlrmm.cn/themes//Pages/Mix/4.gif">
+                        <p style="font-weight: bold;">蟲</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 右側功能欄 -->
+        <div id="rightlist">
+            <a href="#">
+                <img title="返回頂端" src="../圖片素材/img9.png" style="margin: auto;">
+            </a>
+
+            <div style="background-color: rgba(7, 91, 91, 0.919);border-radius: 5px;font-weight: bold;">
+                <br>
+                <div>
+                    <a class="right" href="./小專.html">返回首頁</a>
+                </div>
+                <br><br>
+                <div>
+                    <a class="right" href="./會員註冊.html">註冊帳號</a>
+                </div>
+                <br><br>
+                <div>
+                    <a class="right" href="./寵物合成表(龍).html">寵物合成</a>
+                </div>
+                <br><br>
+    
+                <div>
+                    <a class="right" href="./安裝教學.html">安裝教學</a>
+                </div>
+                <br><br>
+                <div>
+                    <a class="right" style="color: white;" href="javascript:void(0)" onclick="scrollToFooter()">聯繫客服</a>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <div>
+            <div><img class="midimg" src="../圖片素材/333.png"></div>
+        </div>
+        <div class="mixbody">
+            <table id="pet-sheet-table-title" class="pet-sheet-table-title">
+                <tr>
+                    <th class="th1"><a class="pet-sheet-table-title1" href="./寵物合成表(龍).html">龍</a></th>
+                    <th class="th2"><a class="pet-sheet-table-title2" href="#pet-sheet-table-title">獸</a></th>
+                    <th class="th3"><a class="pet-sheet-table-title3" href="#">鳥</a></th>
+                    <th class="th4"><a class="pet-sheet-table-title4" href="#">植物</a></th>
+                    <th class="th5"><a class="pet-sheet-table-title5" href="#">惡魔</a></th>
+                    <th class="th6"><a class="pet-sheet-table-title6" href="#">機械</a></th>
+                    <th class="th7"><a class="pet-sheet-table-title7" href="#">神秘</a></th>
+                    <th class="th8"><a class="pet-sheet-table-title8" href="#">蟲</a></th>
+                </tr>
+
+            </table>
+            <table class="mix-bar">
+                <tr style="font-size: 25px;font-weight: bold;">
+                    <th>圖片</th>
+                    <th>名子</th>
+                    <th>主寵物</th>
+                    <th>副寵物</th>
+                    <th>基礎等級&最高等級</th>
+                </tr>
+                <tr>
+                    <td><img src="../寵物合成表-鳥/3323-removebg-preview.png" alt=""></td>
+                    <td><img src="" alt="">超級風女寶寶</td>
+                    <td><img src="../寵物合成表-獸/3323-removebg-preview.png" alt=""><br>冰晶獸(3)</td>
+                    <td><img src="../寵物合成表-惡魔/3323-removebg-preview.png" alt=""><br>火女(3)</td>
+                    <td style="font-size: 25px;font-weight: bold;">180&205</td>
+                </tr>
+                <tr>
+                    <td><img src="../寵物合成表-獸/孫悟空.png" alt=""></td>
+                    <td>孫悟空</td>
+                    <td><img src="../寵物合成表-鳥/3323-removebg-preview.png" alt=""><br>超級風女寶寶(3)</td>
+                    <td><img src="../寵物合成表-獸/33233-removebg-preview.png" alt=""><br>異次元冰晶獸(3)</td>
+                    <td style="font-size: 25px;font-weight: bold;">185&210</td>
+                </tr>
+            </table>
+        </div>
+        <!-- footer -->
+        <div class="footerconatiner">
+            <div class="communication">
+                <div class="communication-text">
+                    <img class="communication-img1" src="https://i.postimg.cc/zXscsmsL/community-1.png">
+                </div>
+                <div class="communication-text">
+                    <img class="communication-img2" src="https://i.postimg.cc/3w7bwXJY/community-2.png">
+                </div>
+                <div class="communication-text">
+                    <img class="communication-img3" src="https://i.postimg.cc/3x2c7Sht/community-3.png">
+
+                </div>
+                <div class="communication-text">
+                    <img class="communication-img4" src="https://i.postimg.cc/QN5jLpM0/community-4.png">
+
+                </div>
+            </div>
+
+            <div class="footer" id="footer">
+                <a href="#">
+                    <img class="footer-img" src="https://i.postimg.cc/JzrxtdTt/top-logo.png">
+                </a>
+                <div class="footer-text">奇幻寶貝Mixmaster為一款Q版的角色扮演RPG遊戲，戰鬥方式為控制主角和多個寵物同時進行戰鬥<br>
+                    能夠朋友們共同進行對戰、交換寵物、市集擺攤等多種互動方式
+                    藉由"合成"更強力的寵物，以一起打敗各個地域的頭目為目標吧!<br><br>
+                    本遊戲的分級制度為6+保護級，請注意遊玩時間，勿沉迷於遊戲<br>
+                    本商城主要以微信支付為主，請小心任何詐騙形式的儲值方式!<br><br>
+                    ©2025 Mixmaster NAVIGATION 保留所有權利<br>
+                    Copyright © NAV.Corp <br> <br>
+                    如有任何問題，請洽官方資訊:aaaaaa55589@gmail.com<br>
+                </div>
+                <div>
+                    <img class="footer-img2" src="https://i.postimg.cc/D0vckhFT/image.png">
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- js------------------------------------------ -->
+        <script>
+            function toggleMenu() {
+                let menu = document.getElementById("dropdownmenu");
+                menu.classList.toggle("active") /*切換menu*/
+            }
+        </script>
+
+        <script>  /*下選單對齊上選單*/
+            function updateNavbarHeadPosition() {
+                if (window.innerWidth > 968) {
+                    // 只在桌機版計算對齊
+                    let nav2 = document.querySelector('.nav2')?.getBoundingClientRect();
+                    let nav6 = document.querySelector('.nav6')?.getBoundingClientRect();
+
+                    document.documentElement.style.setProperty('--nav2-left', `${nav2.left}px`);
+                    document.documentElement.style.setProperty('--navbar-width', `${nav6.right - nav2.left}px`);
+
+                    navbarHEAD.style.display = "flex"; // 桌機版顯示
+                } else {
+                    navbarHEAD.style.display = "none"; // 手機版完全隱藏
+                }
+            };
+            window.addEventListener("load", updateNavbarHeadPosition)
+            window.addEventListener("resize", updateNavbarHeadPosition)
+        </script>
+
+        <script> /*畫面往下時，背景圖片隱藏*/
+            window.addEventListener("scroll", function () {
+                let centerImg = document.querySelector(".centerimg")
+                if (window.scrollY > 200) {
+                    centerImg.style.opacity = "0"
+                } else {
+                    centerImg.style.opacity = "1"
+                }
+            })
+        </script>
+        <script> /*畫面往下時，背景圖片隱藏*/
+            window.addEventListener("scroll", function () {
+                let centerImg = document.querySelector(".centerimg")
+                if (window.scrollY > 200) {
+                    centerImg.style.opacity = "0"
+                } else {
+                    centerImg.style.opacity = "1"
+                }
+            })
+        </script>
+        <script>/*右側功能欄會隨著畫面移動且具有延遲效果*/
+            document.addEventListener("DOMContentLoaded", function () {
+                let redDiv = document.getElementById("rightlist");
+
+                let targetTop = -500; // 預設在 top: 120px;
+                let currentTop = targetTop; // 目前位置
+                let speed = 0.6; // 跟隨速度，數值越小延遲越大
+
+                window.addEventListener("scroll", function () {
+                    targetTop = -500 + window.scrollY * 1; // 讓圖片稍微跟隨滾動，但不完全同步
+                });
+
+                function smoothScroll() {
+                    currentTop += (targetTop - currentTop) * speed; // 漸進移動到目標位置
+                    redDiv.style.top = currentTop + "px";
+                    requestAnimationFrame(smoothScroll);
+                }
+
+                smoothScroll();
+            });
+        </script>
+        <script>//跳至底部，且平滑移動
+            function scrollToFooter() {
+                document.getElementById("footer").scrollIntoView({ behavior: "smooth" })
+            }
+        </script>
+    <script>
+        window.onload = function () { //檢查會員是否登入 已登入=>更改icon
+            let currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
+            let loginNav = document.querySelector(".login-rj"); // 找到「會員登入/註冊」的 <a> 標籤
+
+            if (currentUser) { // 用戶已登入
+                loginNav.innerHTML = `<img src="../圖片素材/login.jpg" alt="會員" style="width: 40px; height: 40px; border-radius: 50%;">`;
+                loginNav.href = "#"; // 避免點擊跳轉
+                loginNav.style.cursor = "pointer";
+
+                // 點擊會員 Icon 進行登出
+                loginNav.addEventListener("click", function () {
+                    let confirmLogout = confirm("確定要登出嗎？");
+                    if (confirmLogout) {
+                        localStorage.removeItem("currentUser");
+                        window.location.reload();
+                    }
+                });
+            }
+        };
+    </script>
+
+    </body>
+
+</html>
