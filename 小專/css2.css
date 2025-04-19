@@ -52,6 +52,7 @@
             text-decoration: underline
         }
         .navbar-sheet{
+            color: white;
             text-decoration: none;
             
         }
@@ -88,6 +89,7 @@
         }
         .navbar-event{
             text-decoration: none;
+            color: white;
         }
 
 
@@ -255,6 +257,7 @@
             color: white !important;
         }
         .login-rj{
+            color: white ;
             text-decoration: none;
         }
 
